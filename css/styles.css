@@ -61,7 +61,8 @@ article {
 }
 
 .scroll-content h3 {
-  margin-top: 2em;
+  margin: 0;
+  padding: 2em 0 1em 0;
 }
 
 .scroll-content th {

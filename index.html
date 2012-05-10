@@ -108,6 +108,9 @@
         {{#achievements}}
           <p>{{.}}</p>
         {{/achievements}}
+        {{^achievements}}
+          <p>None</p>
+        {{/achievements}}
       {{/player}}
       {{^player}}
         <h1>Player not found.</h1>
