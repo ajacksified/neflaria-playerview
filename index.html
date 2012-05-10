@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Neflaria PlayerViewer</title>
+  <meta name="description" content="A simple app to show off your Neflaria player information">
+
+  <meta name="viewport" content="width=device-width">
+
+  <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/html5-reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+    <h1>Neflaria PlayerViewer</h1>
+  </header>
+
+  <div role="main" id="main">
+    <form class="form" action="/" method="GET">
+      <label for="player">Player Name</label>
+      <input type="text" id="player" name="player" />
+      <button id="submit" type="submit">View</button>
+    </form>
+
+    <article id="playerInfo"> </article>
+  </div>
+
+  <footer>
+    &copy; 2012 Olivine Labs, LLC. All rights reserved. <a href="https://github.com/ajacksified/neflaria-playerview">Code MIT licensed on Github</a>.
+  </footer>
+
+  <script type='text/template' id='playerTemplate'>
+    {{#player}}
+      <h1>{{name}} {{lastname}}</h1>
+      {{#cname}}<h2>Clan {{cname}}</h2>{{/cname}}
+
+      <table id="stats">
+        <tbody>
+          <tr>
+            <th>Race</th>
+            <td>{{race}}</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>{{gender}}</td>
+          </tr>
+          {{#rank_name}}
+          <tr>
+            <th>Rank</th>
+            <td>{{rank_name}}</td>
+          </tr>
+          {{/rank_name}}
+          <tr>
+            <th>Level</th>
+            <td>{{lvl}}</td>
+          </tr>
+          <tr>
+            <th>Last active</th>
+            <td>{{actiontime}}</td>
+          </tr>
+          <tr>
+            <th>Last active</th>
+            <td>{{actiontime}}</td>
+          </tr>
+          <tr>
+            <th>Total PKs</th>
+            <td>{{pks}}</td>
+          </tr>
+          <tr>
+            <th>Completed Quests</th>
+            <td>{{compquests}}</td>
+          </tr>
+          <tr>
+            <th>Total Kills</th>
+            <td>{{totalkills}}</td>
+          </tr>
+          <tr>
+            <th>Dexterity</th>
+            <td>{{dex}}</td>
+          </tr>
+          <tr>
+            <th>Strength</th>
+            <td>{{str}}</td>
+          </tr>
+          <tr>
+            <th>Vitality</th>
+            <td>{{vit}}</td>
+          </tr>
+          <tr>
+            <th>Wisdom</th>
+            <td>{{wis}}</td>
+          </tr>
+          <tr>
+            <th>Intelligence</th>
+            <td>{{ntl}}</td>
+          </tr>
+          <tr>
+            <th>Banked Gold</th>
+            <td>{{bank}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Earned Achievements</h3>
+      {{#achievements}}
+        <p>{{.}}</p>
+      {{/achievements}}
+    {{/player}}
+    {{^player}}
+      <h1>Player not found.</h1>
+    {{/player}}
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <script src="js/libs/mustache.js"></script>
+  <script src="js/script.js"></script>
+
+  <!--
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  -->
+</body>
+</html>

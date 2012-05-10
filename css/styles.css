@@ -1,0 +1,102 @@
+body {
+  color: #fafafa;
+  background: #111 url(../img/wood_1.png);
+  font-family: Ovo, Georgia, "Times New Roman", serif;
+}
+
+
+a {
+  color: #e4bd0f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f4cd1f;
+}
+
+a:visited {
+  color: #c49d00;
+}
+
+h1, h2, h3, th {
+  color: #D5AA13;
+  font-weight: normal;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: #D5AA13;
+}
+
+p {
+  margin: 0;
+  line-height: 1.4em;
+}
+
+form {
+  border-top: solid 1px rgba(255,255,255,.25);
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+article {
+  border-top: solid 1px rgba(255,255,255,.25);
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: .5em;
+}
+
+tr:nth-child(odd){
+  background: rgba(255,255,255,.075);
+  border-bottom: solid 1px rgba(255,255,255,.25);
+}
+
+tr:hover {
+  background: rgba(255,255,255,.15);
+  -moz-transition: background .5s;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+footer {
+  margin-top: 2em;
+  text-align: center;
+  padding: 2em 0;
+  border-top: solid 1px rgba(255,255,255,.25);
+  background: rgba(0,0,0,.25);
+}
+
+
+#main {
+  max-width: 800px;
+  margin: auto;
+}
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
