@@ -18,7 +18,7 @@ a:visited {
   color: #c49d00;
 }
 
-h1, h2, h3, th {
+h1, h2, h3 {
   color: #D5AA13;
   font-weight: normal;
 }
@@ -44,10 +44,100 @@ form {
 }
 
 article {
-  border-top: solid 1px rgba(255,255,255,.25);
-  margin-top: 10px;
-  padding-top: 10px;
   text-align: center;
+  width: 595px;
+  margin: auto;
+}
+
+.scroll-content {
+  width: 595px;
+  background: transparent url(../img/scroll-middle.png?what=safadsf) top center repeat-y;
+  color: #543;
+}
+
+.scroll-content h1, .scroll-content h2, .scroll-content h3 {
+  margin-top: 0;
+  color: #210;
+}
+
+.scroll-content h3 {
+  margin-top: 2em;
+}
+
+.scroll-content th {
+  color: #210;
+}
+
+.scroll-top {
+  width: 595px;
+  height: 158px;
+  background: transparent url(../img/scroll-top.png?top=2) top left no-repeat;
+  margin-top: 20px;
+}
+
+.scroll-bottom {
+  width: 595px;
+  height: 122px;
+  background: transparent url(../img/scroll-bottom.png) top right no-repeat;
+}
+
+button {
+  color: #fff;
+  padding: .25em .75em;
+
+  background: -moz-linear-gradient(
+      top,
+      #564288 0%,
+      #30254b);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#564288),
+    to(#30254b));
+
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border: 1px solid #261d3b;
+
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 2px rgba(255,255,255,0.7);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 2px rgba(255,255,255,0.7);
+  text-shadow:
+    0px -1px 2px rgba(000,000,000,1),
+    0px 1px 1px rgba(0,0,0,1);
+  border-radius: 5px;
+}
+
+button:hover {
+  background: -moz-linear-gradient(
+      top,
+      #665298 0%,
+      #40355b);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#665298),
+    to(#40355b)); 
+}
+
+button:active {
+ background: -moz-linear-gradient(
+      top,
+      #30254b 0%,
+      #564288);
+ background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#30254b),
+    to(#564288));
+}
+
+input {
+  border: solid 1px #564288;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: .25em .75em;
 }
 
 table {
@@ -57,18 +147,6 @@ table {
 th, td {
   text-align: left;
   padding: .5em;
-}
-
-tr:nth-child(odd){
-  background: rgba(255,255,255,.075);
-  border-bottom: solid 1px rgba(255,255,255,.25);
-}
-
-tr:hover {
-  background: rgba(255,255,255,.15);
-  -moz-transition: background .5s;
-  -webkit-transition: background .5s;
-  transition: background .5s;
 }
 
 footer {

@@ -18,12 +18,12 @@
 <body>
   <!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
-    <h1>Neflaria PlayerViewer</h1>
+    <img src="img/vector_logo_512.png" alt="Neflaria PlayerViewer" />
   </header>
 
   <div role="main" id="main">
     <form class="form" action="/" method="GET">
-      <label for="player">Player Name</label>
+      <label for="player">Player:</label>
       <input type="text" id="player" name="player" />
       <button id="submit" type="submit">View</button>
     </form>
@@ -36,85 +36,87 @@
   </footer>
 
   <script type='text/template' id='playerTemplate'>
-    {{#player}}
-      <h1>{{name}} {{lastname}}</h1>
-      {{#cname}}<h2>Clan {{cname}}</h2>{{/cname}}
+    <div class="scroll-top">&nbsp;</div><div class="scroll-content">
+      {{#player}}
+        <h1>{{name}} {{lastname}}</h1>
+        {{#cname}}<h2>Clan {{cname}}</h2>{{/cname}}
 
-      <table id="stats">
-        <tbody>
-          <tr>
-            <th>Race</th>
-            <td>{{race}}</td>
-          </tr>
-          <tr>
-            <th>Gender</th>
-            <td>{{gender}}</td>
-          </tr>
-          {{#rank_name}}
-          <tr>
-            <th>Rank</th>
-            <td>{{rank_name}}</td>
-          </tr>
-          {{/rank_name}}
-          <tr>
-            <th>Level</th>
-            <td>{{lvl}}</td>
-          </tr>
-          <tr>
-            <th>Last active</th>
-            <td>{{actiontime}}</td>
-          </tr>
-          <tr>
-            <th>Last active</th>
-            <td>{{actiontime}}</td>
-          </tr>
-          <tr>
-            <th>Total PKs</th>
-            <td>{{pks}}</td>
-          </tr>
-          <tr>
-            <th>Completed Quests</th>
-            <td>{{compquests}}</td>
-          </tr>
-          <tr>
-            <th>Total Kills</th>
-            <td>{{totalkills}}</td>
-          </tr>
-          <tr>
-            <th>Dexterity</th>
-            <td>{{dex}}</td>
-          </tr>
-          <tr>
-            <th>Strength</th>
-            <td>{{str}}</td>
-          </tr>
-          <tr>
-            <th>Vitality</th>
-            <td>{{vit}}</td>
-          </tr>
-          <tr>
-            <th>Wisdom</th>
-            <td>{{wis}}</td>
-          </tr>
-          <tr>
-            <th>Intelligence</th>
-            <td>{{ntl}}</td>
-          </tr>
-          <tr>
-            <th>Banked Gold</th>
-            <td>{{bank}}</td>
-          </tr>
-        </tbody>
-      </table>
+        <table id="stats">
+          <tbody>
+            <tr>
+              <th>Race</th>
+              <td>{{race}}</td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td>{{gender}}</td>
+            </tr>
+            {{#rank_name}}
+            <tr>
+              <th>Rank</th>
+              <td>{{rank_name}}</td>
+            </tr>
+            {{/rank_name}}
+            <tr>
+              <th>Level</th>
+              <td>{{lvl}}</td>
+            </tr>
+            <tr>
+              <th>Last active</th>
+              <td>{{actiontime}}</td>
+            </tr>
+            <tr>
+              <th>Last active</th>
+              <td>{{actiontime}}</td>
+            </tr>
+            <tr>
+              <th>Total PKs</th>
+              <td>{{pks}}</td>
+            </tr>
+            <tr>
+              <th>Completed Quests</th>
+              <td>{{compquests}}</td>
+            </tr>
+            <tr>
+              <th>Total Kills</th>
+              <td>{{totalkills}}</td>
+            </tr>
+            <tr>
+              <th>Dexterity</th>
+              <td>{{dex}}</td>
+            </tr>
+            <tr>
+              <th>Strength</th>
+              <td>{{str}}</td>
+            </tr>
+            <tr>
+              <th>Vitality</th>
+              <td>{{vit}}</td>
+            </tr>
+            <tr>
+              <th>Wisdom</th>
+              <td>{{wis}}</td>
+            </tr>
+            <tr>
+              <th>Intelligence</th>
+              <td>{{ntl}}</td>
+            </tr>
+            <tr>
+              <th>Banked Gold</th>
+              <td>{{bank}}</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <h3>Earned Achievements</h3>
-      {{#achievements}}
-        <p>{{.}}</p>
-      {{/achievements}}
-    {{/player}}
-    {{^player}}
-      <h1>Player not found.</h1>
-    {{/player}}
+        <h3>Earned Achievements</h3>
+        {{#achievements}}
+          <p>{{.}}</p>
+        {{/achievements}}
+      {{/player}}
+      {{^player}}
+        <h1>Player not found.</h1>
+      {{/player}}
+    </div><div class="scroll-bottom">&nbsp;</div>
   </script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
