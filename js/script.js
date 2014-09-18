@@ -4,7 +4,7 @@
 
     var loadData = function(playerName){
       $.ajax({
-        url: 'http://web1.neflaria.com/api/player.php',
+        url: 'https://neflaria.com/api/player.php',
         dataType: 'jsonp',
         data: { player: playerName },
         success: function(data){
